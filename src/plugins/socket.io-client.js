@@ -11,7 +11,7 @@ class CCMSocket {
   }
 
   connect () {
-    this.socket = io(CCMSocket.URI)
+    this.socket = io(CCMSocket.URI, { withCredentials: true })
     this.socket.on('connect', () => {
       // console.log(`socket to ${CCMSocket.URI} connected`)
     })
