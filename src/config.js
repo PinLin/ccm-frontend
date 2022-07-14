@@ -1,5 +1,7 @@
 const config = {
-  baseUrl: 'https://ccm.ntut.com.tw'
-  // baseUrl: 'https://localhost:8787'
+  // baseUrl: 'https://ccm.pinlin.me',
+  // basePath: '/api'
+  baseUrl: 'http://localhost:3000',
+  basePath: '/'
 }
 export default config

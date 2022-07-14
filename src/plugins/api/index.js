@@ -5,7 +5,7 @@ import bcrypt from 'bcryptjs'
 import { SHA256, AES, EC, MessageHandler } from './util'
 // import Blob from 'blob'
 
-axios.defaults.baseURL = `${config.baseUrl}/api`
+axios.defaults.baseURL = `${config.baseUrl}${config.basePath}`
 axios.defaults.withCredentials = true
 axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8'
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = 'http://localhost:8080'

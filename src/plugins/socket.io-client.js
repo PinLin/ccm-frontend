@@ -3,15 +3,15 @@ import config from '@/config'
 import io from 'socket.io-client'
 
 class CCMSocket {
-  // static URI = 'http://localhost:8787'
   static URI = config.baseUrl
+  static PATH = config.basePath
 
   constructor () {
     this.socket = undefined
   }
 
   connect () {
-    this.socket = io(CCMSocket.URI, { withCredentials: true })
+    this.socket = io(CCMSocket.URI, { withCredentials: true, path: CCMSocket.PATH + '/socket.io' })
     this.socket.on('connect', () => {
       // console.log(`socket to ${CCMSocket.URI} connected`)
     })
